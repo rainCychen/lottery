@@ -4,4 +4,4 @@
 create.php
 
  [参考](https://github.com/fouber/lottery.git)
- [参考](http://www.goat1000.com/tagcanvas.php)
+ [文档参考](http://www.goat1000.com/tagcanvas.php)
