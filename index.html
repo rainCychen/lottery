@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="screen-orientation" content="portrait">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+  <head>
+    <meta name="screen-orientation" content="portrait" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
     <title>年会抽奖小程序</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/wall.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body >
-<div id="main" class="wall"></div>
-<!-- <div id="logo" > -->
-
-    <img class="logo1" src="./img/aodianyun1.png" alt="">
-    <img class="logo2" src="./img/guangdianyun1.png" alt="">
-<!-- </div> -->
-<div id="result" class="result"></div>
-<div id="tools" class="tools">
-    <button
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/wall.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <div id="main" class="wall">
+      <img class="logo1" src="./img/aodianyun1.png" alt="" />
+      <img class="logo2" src="./img/guangdianyun1.png" alt="" />
+    </div>
+    <div id="result" class="result"></div>
+    <div id="tools" class="tools">
+      <button
         v-on="click: onClick($value)"
         class="pure-button"
         v-class="button-error: selected == $value"
-        v-repeat="btns">{{$value}}</button>
-    <button
+        v-repeat="btns"
+      >
+        {{$value}}
+      </button>
+      <button
         class="pure-button"
         v-on="click: toggle"
         v-class="
                 button-secondary: !running,
                 button-success: running
-            ">{{running?'停!':'开始'}}</button>
-    <button class="pure-button button-warning" v-on="click: reset">重置</button>
-</div>
-<div class="tctooltip" ></div>
-<script type="text/javascript" src="js/zepto.js"></script>
-<script type="text/javascript" src="js/vue.js"></script>
-<script type="text/javascript" src="js/tagcanvas.min.js"></script>
-<script type="text/javascript" src="js/member.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-</body>
+            "
+      >
+        {{running?'停!':'开始'}}
+      </button>
+      <button class="pure-button button-warning" v-on="click: reset">
+        重置
+      </button>
+    </div>
+    <div class="tctooltip"></div>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/tagcanvas.min.js"></script>
+    <script type="text/javascript" src="./member.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
